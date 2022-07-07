@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+    <title>Show Some info</title>
+</head>
+<body>
+
+<div class="herosection">
+    <h1>Welcome to Show some info:-</h1>
+    <p>Choose the search Parameter and get the Population,Region,Capital and Currency</p>
+</div>
+<div class="mainsection">
+
+  <div>
+    <label for="searchParamter">Choose your Search Parameter:-</label>
+    <select class="m-2" id="parameter" onchange="setinfoandurl()">
+        <option selected>Select Parameter</option>
+        <option value="Name">Name</option>
+        <option value="Capital">Capital</option>
+        <option value="Calling Code">Calling Code</option>
+      </select>
+    <p class="infobox alert-info"></p>
+    <input type="text" name = "searchbox" placeholder = "Search Value" class="querybox m-2">
+    <p class="alertpara" style="display:none"></p>
+    <button class="btn btn-primary m-2" onclick="Showdetails()">Search</button>
+</div>
+
+<p class="errorbox alert-danger"></p>
+
+<div class="card" style="display: none;">
+  <img class="card-img-top" src="" alt="Card image cap" id="countryFlag">
+  <div class="card-body">
+    <h5 class="card-title" id="countryName"></h5>
+    <p class="card-text" id="populationName"></p>
+    <p class="card-text" id="regionName"></p>
+    <p class="card-text" id="capitalName"></p>
+    <p class="card-text" id="currencyName"></p>
+    
+  
+</div>
+</div>
+
+</div>
+</body>
+
+    <script src="/script.js"></script>
+
+
+</html>
